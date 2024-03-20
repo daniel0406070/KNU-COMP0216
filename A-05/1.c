@@ -14,17 +14,17 @@ element stack[MAX_STACK_SIZE];
 int top = 0;
 
 void sprint(){
-    printf("current stack elements: \n");
-        for(int i = 0; i < top; i++){
+    for(int i = top-1; i >=0 ; i--){
         printf("%d %s\n", stack[i].id, stack[i].name);
     }
-    printf("\n");
+    printf("\n\n");
 }
 
 
 void push(int id, char *name){
     if(top == MAX_STACK_SIZE){
         printf("Stack is full, cannot add element\n");
+        printf("current stack elements : \n");
         sprint();
         exit(0);
     }
@@ -36,7 +36,9 @@ void push(int id, char *name){
 void pop(){
     if(top == 0){
         printf("Stack is empty, cannot delete element\n");
+        printf("current stack elements : \n");
         sprint();
+        exit(0);
     }
     top--;
 }
@@ -69,7 +71,8 @@ int main(){
             sprint();
         }
         else{
-            printf("Invalid operation\n");
+            printf("wrong command! try again!\n\n");
+            while(fgetc(fp) != '\n');
         }
     }
 }
