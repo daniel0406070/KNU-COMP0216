@@ -166,4 +166,7 @@ int main(){
     delete_all(&a);
     delete_all(&b);
     delete_all(&c);
+
+    fclose(fa);
+    fclose(fb);
 }

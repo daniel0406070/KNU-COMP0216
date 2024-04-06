@@ -112,4 +112,6 @@ int main(){
     printll(root);
 
     deleteall(&root);
+
+    fclose(fp);
 }

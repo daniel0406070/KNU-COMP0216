@@ -203,4 +203,7 @@ int main(){
     
 
     delete_all(&a);
+
+    fclose(fa);
+    fclose(fb);
 }
