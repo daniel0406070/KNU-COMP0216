@@ -79,6 +79,10 @@ int main(){
     }
 
     int* path = (int*)malloc(vertex*sizeof(int));
+    for(int i=0; i<vertex; i++){
+        path[i] = 0;
+    }
+
     for(int i=1; i<vertex; i++){
         int j = i;
         int cnt = 0;
